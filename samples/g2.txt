@@ -1,0 +1,75 @@
+const int const1 = 1, const2 = -100;
+const float const3 = 123.0;
+const float const4 = -321.0;
+
+int var1, var2;
+float var3;
+float var4;
+
+int max(int va1, int va2, int va3) {
+	int del1;
+	if (va1>=va2) {
+        if(va1>=va3) {
+            del1=va1;
+        }
+        if(va1<va3) 
+            del1 = va3;
+    }
+     
+    if(va1 < va2) {  
+        if (va2 >= va3)
+            del1 = va2;
+        if (va2<va3)
+            del1 = va3;
+    }
+	   
+	return (del1);
+}
+
+int add1(int base,int step, int n) {
+    while(n>0) {
+        base = base + step;
+        n = n-1;			  
+    }
+    return (base);
+}
+
+
+
+void main() {
+    
+    int cast1,cast2,cast3;
+    int cast4,cast5,cast6;
+    int re1, choice;
+    
+    printf("Input three numbers: ");
+    scanf(cast1,cast2,cast3);
+    var1 = max(cast1,cast2,cast3);
+    printf("the max : ");
+    printf(var1);
+    
+    printf("the base: ");
+    scanf(cast4);
+    printf("the step: ");
+    scanf(cast5);
+    printf("the number: ");
+    scanf(cast6);
+    re1 = add1(cast4,cast5,cast6);
+    
+    printf("the result: ");
+    printf(re1);
+ 
+    printf("input the choice: 1 2 3 , 0 for return ");
+    scanf( choice );
+    while ( choice != 0 )
+    {
+      switch(choice){
+         case 1: printf("good ");
+         case 2: printf("better ");
+         case 3: printf("best ");
+         default: printf("error ");
+       }
+       scanf( choice );
+    }
+
+}
